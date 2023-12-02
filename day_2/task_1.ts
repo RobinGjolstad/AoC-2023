@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 
-type CubeColor = 'red' | 'green' | 'blue';
-type Cube = {
+export type CubeColor = 'red' | 'green' | 'blue';
+export type Cube = {
     num: number
     color: CubeColor,
 };
@@ -18,7 +18,7 @@ const cube_rules = {
     "blue": 14
 }
 
-function get_cube_from_string(str: string): Cube {
+export function get_cube_from_string(str: string): Cube {
     // Assuming string is 'N color'
     const str_split: string[] = str.split(' ');
     const num: number = Number.parseInt(str_split[0]);
